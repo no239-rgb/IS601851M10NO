@@ -2,9 +2,13 @@ name: CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main # Run tests on any push to the main branch
+      - revision1 # Run tests on any push to the revision1 branch
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main  # Run tests on any pull request to the main branch
+      - revision1 # Run tests on any pull request to the revision1 branch
 
 jobs:
   test:
