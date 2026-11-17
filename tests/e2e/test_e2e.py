@@ -1,4 +1,4 @@
-# tests/e2e/test_e2e.py
+#  tests/e2e/test_e2e.py
 
 import pytest  # Import the pytest framework for writing and running tests
 from playwright.sync_api import expect
@@ -72,3 +72,5 @@ def test_calculator_divide_by_zero(page, fastapi_server):
     # "Error: Cannot divide by zero!". This verifies that the application handles division by zero
     # gracefully and displays the correct error message to the user.
     assert page.inner_text('#result') == 'Error: Cannot divide by zero!'
+
+
